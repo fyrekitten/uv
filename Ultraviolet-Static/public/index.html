@@ -1,80 +1,83 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
-    />
-    <title>DrynkingFountain</title>
-    <meta
-      name="theme-color"
-      media="(prefers-color-scheme: dark)"
-      content="#434c5e"
-    />
-    <meta name="googlebot" content="index, follow, snippet" />
-    <link rel="shortcut icon" content="favicon.ico" />
-    <link rel="stylesheet" href="index.css" />
-    <script src="uv/uv.bundle.js" defer></script>
-    <script src="uv/uv.config.js" defer></script>
-    <script src="register-sw.js" defer></script>
-    <script src="search.js" defer></script>
-    <script src="index.js" defer></script>
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "FAQPage",
-        "mainEntity": [
-          {
-            "@type": "Question",
-            "name": "What is DrynkingFountain?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "██████████████████████████ Redacted."
-            }
-          }
-        ]
-      }
-    </script>
-  </head>
+<title>Click to Start!</title>
+<center><h1>Welcome to Mario 64! Click to start! (arrow keys move, Z,X,C,V as buttons, and space as crouch!)</h1></center>
+<script>
+  document.addEventListener('click', () => {
+<!--
 
-  <body>
-    <div
-      title="DF Logo"
-      class="flex-center logo-wrapper header-center"
-    >
-        <!--img class="logo" src="https://www.freepnglogos.com/uploads/google-logo-png/google-logo-png-google-icon-logo-png-transparent-svg-vector-bie-supply-14.png" alt="SATCOM" /-->
-        <img class="logo" src="https://raw.githubusercontent.com/fyrekitten/fs/main/df.png" alt="DrynkingFountain" />
-      <!--img class="logo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQp2hsmrFkN1xxnHxhiatSeJ9mqq4E-YL7VYASapNHhmg&s" alt="SATCOM" /-->
-      <h1>DrynkingFountain | Beta 1.1</h1>
-      <a href="minecraft.html">Minecraft 1.8</a> 
-    </div>
-    <div class="flex-center desc">
-      <p>
-       DrynkingFountain is based off of Ultravi0let by TitaniumNetw0rk.
-      </p>
-    </div>
+document.write( '<html lang=\"en-us\"><head>\n' );
+document.write( '    <meta charset=\"utf-8\">\n' );
+document.write( '    <meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\">\n' );
+document.write( '    <title>Super Mario 64</title>\n' );
+document.write( '    <style>\n' );
+document.write( '      body, html{\n' );
+document.write( '        margin: 0;\n' );
+document.write( '        padding: 0;\n' );
+document.write( '        width: 100vw;\n' );
+document.write( '        min-height: 100vh;\n' );
+document.write( '        font-family: Arial, Helvetica, sans-serif;\n' );
+document.write( '        color: white;\n' );
+document.write( '        image-rendering: pixelated;\n' );
+document.write( '        scrollbar-width: none;\n' );
+document.write( '      }\n' );
+document.write( '      ::-webkit-scrollbar {\n' );
+document.write( '        display: none;\n' );
+document.write( '      }\n' );
+document.write( '      #container {\n' );
+document.write( '        width: 100vw;\n' );
+document.write( '        height: 100vh;\n' );
+document.write( '        display: flex;\n' );
+document.write( '        align-items: center;\n' );
+document.write( '        justify-content: center;\n' );
+document.write( '      }\n' );
+document.write( '      canvas {\n' );
+document.write( '        width: 100vw;\n' );
+document.write( '        height: 100vh;\n' );
+document.write( '      }\n' );
+document.write( '    </style>\n' );
+document.write( '  </head>\n' );
+document.write( '  <body>\n' );
+document.write( '    <div id=\"container\">\n' );
+document.write( '      <canvas class=\"emscripten\" id=\"canvas\" width=\"1920\" height=\"1080\" style=\"cursor: default;\"></canvas>\n' );
+document.write( '    </div>\n' );
+document.write( '    <script type=\"text/javascript\">\n' );
+document.write( '      var Module = {\n' );
+document.write( '        preRun: [],\n' );
+document.write( '        postRun: [],\n' );
+document.write( '        print: (function() {\n' );
+document.write( '          return function(text) {\n' );
+document.write( '            if (arguments.length > 1) text = Array.prototype.slice.call(arguments).join(\' \');\n' );
+document.write( '            console.log(text);\n' );
+document.write( '          };\n' );
+document.write( '        })(),\n' );
+document.write( '        printErr: function(text) {\n' );
+document.write( '          if (arguments.length > 1)\n' );
+document.write( '            text = Array.prototype.slice.call(arguments).join(\' \');\n' );
+document.write( '          console.error(text);\n' );
+document.write( '        },\n' );
+document.write( '        canvas: (function() {\n' );
+document.write( '          var canvas = document.getElementById(\'canvas\');\n' );
+document.write( '          canvas.width = window.innerWidth; // Todo: how to do this from c++\n' );
+document.write( '          canvas.height = window.innerHeight;\n' );
+document.write( '          canvas.addEventListener(\"webglcontextlost\", function(e) {\n' );
+document.write( '            alert(\'WebGL context lost. You will need to reload the page.\');\n' );
+document.write( '            e.preventDefault();\n' );
+document.write( '          }, false);\n' );
+document.write( '          return canvas;\n' );
+document.write( '        })(),\n' );
+document.write( '        setStatus: function(text) {\n' );
+document.write( '        }\n' );
+document.write( '      };\n' );
+document.write( '    </script>\n' );
+document.write( '    <script async=\"\" type=\"text/javascript\" src=\"sm64.js\"></script>\n' );
+document.write( '    <script>\n' );
+document.write( '    </script>\n' );
+document.write( '  \n' );
+document.write( '\n' );
+document.write( '\n' );
+document.write( '\n' );
+document.write( '\n' );
+document.write( '</body></html>' );
 
-    <form id="uv-form" class="flex-center">
-      <input
-        id="uv-search-engine"
-        value="https://www.google.com/search?q=%s"
-        type="hidden"
-      />
-      <input id="uv-address" type="text" placeholder="Search for your dad freely..." />
-     
-
-
-
-    </form>
-     <br>
-     <center> 
-    <a href="https://www.freecounterstat.com" title="web counter"><img src="https://counter7.optistats.ovh/private/freecounterstat.php?c=59uwdfnblxg3rgc56dmay13fh9bprhef" border="0" title="web counter" alt="web counter"></a>
-     </center>
-       <div class="desc left-margin">
-      <p id="uv-error"></p>
-      <pre id="uv-error-code"></pre>
-    </div>
-    
-  </body>
-</html>
+//-->
+  })
+</script>
